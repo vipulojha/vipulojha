@@ -18,14 +18,24 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Run Metrics
+      - name: Main metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || github.token }}
-          config: |
-            plugin_individual: true
-          outputs: |
-            ${commenter.profile_summary}
-            ${commenter.plugin_individual}
-            ${commenter.plugin_repository}
-            ${commenter.plugin_pages}
+          filename: github-metrics.svg
+          base: header, activity, community, metadata
+          config_timezone: Asia/Kolkata
+          plugin_languages: true
+          plugin_languages_sections: most-used
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          plugin_languages_analysis_timeout: 15
+
+      - name: Contribution calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          filename: github-metrics.isocalendar.svg
+          base: ""
+          plugin_isocalendar: true
+          plugin_isocalendar_duration: half-year
