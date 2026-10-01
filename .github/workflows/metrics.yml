@@ -25,4 +25,7 @@ jobs:
           config: |
             plugin_individual: true
           outputs: |
-            ${commenter.plugin_summary}
+            ${commenter.profile_summary}
+            ${commenter.plugin_individual}
+            ${commenter.plugin_repository}
+            ${commenter.plugin_pages}
