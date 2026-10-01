@@ -19,7 +19,7 @@
 ## 🛠️ Languages
 
 By bytes across all public repos — C# leads, followed by HTML, JavaScript and PowerShell.
-([github-readme-stats](https://github.com/anuraghazra/github-readme-stats))
+Powered by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats).
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vipulojha&layout=compact&hide_border=true&langs_count=8" alt="Top Languages" />
